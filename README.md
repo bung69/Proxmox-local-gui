@@ -1,20 +1,20 @@
 # Proxmox-local-gui
 
 
-From a proxmox terminal as root:
+### From a proxmox terminal as root:
 
 ```
 apt update
 apt install -y xorg  chromium
 ```
 
-## add new local user (pam)  with minimum privalages to launch chromium with xinit
+### Add new local user (pam)  with minimum privalages to launch chromium with xinit
 ```
 useradd kiosk
 mkhomedir_helper kiosk
 ```
 
-## Create bash script to launch chromium with xinit
+### Create bash script to launch chromium with xinit
 ```
 nano /home/kiosk/launch-kiosk-gui.sh
  ```
@@ -39,7 +39,7 @@ https://127.0.0.1:8006 \
 --disk-cache-dir=/dev/null \
 --password-store=basic
 ```
-## change owner, group and restrict permissions
+### change owner, group and restrict permissions
 
 ```
 chown kiosk /home/kiosk/launch-kiosk-gui.sh
@@ -48,7 +48,7 @@ chmod a-rwx /home/kiosk/launch-kiosk-gui.sh
 chmod u+x /home/kiosk/launch-kiosk-gui.sh
 ```
 
-## Create service to run script at startup
+### Create service to run script at startup
 
 ```
 nano /etc/systemd/system/launch-kiosk-gui.service                
