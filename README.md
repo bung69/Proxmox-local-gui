@@ -55,6 +55,18 @@ nano /home/kiosk/.bashrc
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx
 ```
 
+### Optional.  set login hint to MOTT
+
+```
+nano /usr/bin/pvebanner
+```
+
+After ```https://${localip}:8006/```  add a message like:
+```
+
+Or login as user: kiosk  for local GUI access
+
+```
 
 # References:
 
