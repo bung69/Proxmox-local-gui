@@ -17,26 +17,27 @@ mkhomedir_helper kiosk
 ## Create bash script to launch chromium with xinit
 ```
 nano /home/kiosk/launch-kiosk-gui.sh
-                   
-    #!/bin/sh
+ ```
+ ```
+#!/bin/sh
 
-    # launch chromium directly with xinit
-    xinit \
-    /usr/bin/chromium \
-    https://127.0.0.1:8006 \
-    --kiosk \
-    --no-sandbox \
-    --window-size=1920,1080 \
-    --incognito \
-    --noerrdialogs \
-    --disable-translate \
-    --no-first-run \
-    --fast \
-    --fast-start \
-    --disable-infobars \
-    --disable-features=TranslateUI \
-    --disk-cache-dir=/dev/null \
-    --password-store=basic
+# launch chromium directly with xinit
+xinit \
+/usr/bin/chromium \
+https://127.0.0.1:8006 \
+--kiosk \
+--no-sandbox \
+--window-size=1920,1080 \
+--incognito \
+--noerrdialogs \
+--disable-translate \
+--no-first-run \
+--fast \
+--fast-start \
+--disable-infobars \
+--disable-features=TranslateUI \
+--disk-cache-dir=/dev/null \
+--password-store=basic
 ```
 ## change owner, group and restrict permissions
 
@@ -51,21 +52,22 @@ chmod u+x launch-kiosk-gui.sh
 
 ```
 nano /etc/systemd/system/launch-kiosk-gui.service                
+```
+```
+[Unit]
+Description=Launch Browser Kiosk mode for Local Proxmox GUI access
+After=network.target
 
-      [Unit]
-      Description=Launch Browser Kiosk mode for Local Proxmox GUI access
-      After=network.target
+[Service]
+Type=simple
 
-      [Service]
-      Type=simple
-
-      User=kiosk
-      Group=kiosk
-      WorkingDirectory=/home/kiosk
-      ExecStart=/home/nanodano/launch-kiosk-gui.sh
-      Restart=on-failure
+User=kiosk
+Group=kiosk
+WorkingDirectory=/home/kiosk
+ExecStart=/home/nanodano/launch-kiosk-gui.sh
+Restart=on-failure
 
 
-      [Install]
-      WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
 ```
