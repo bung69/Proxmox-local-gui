@@ -8,7 +8,7 @@ apt update
 apt install -y xorg  chromium
 ```
 
-## add new local user (pam)  with minimum privalages to lauch chromium with xinit
+## add new local user (pam)  with minimum privalages to launch chromium with xinit
 ```
 useradd kiosk
 mkhomedir_helper kiosk
