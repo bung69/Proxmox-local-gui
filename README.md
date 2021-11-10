@@ -44,8 +44,8 @@ https://127.0.0.1:8006 \
 ```
 chown kiosk /home/kiosk/launch-kiosk-gui.sh
 chgrp kiosk /home/kiosk/launch-kiosk-gui.sh
-chmod a-rwx launch-kiosk-gui.sh
-chmod u+x launch-kiosk-gui.sh
+chmod a-rwx /home/kiosk/launch-kiosk-gui.sh
+chmod u+x /home/kiosk/launch-kiosk-gui.sh
 ```
 
 ## Create service to run script at startup
