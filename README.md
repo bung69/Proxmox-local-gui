@@ -45,6 +45,6 @@ chromium https://127.0.0.1:8006 --kiosk --no-sandbox --window-size=1920,1080 --i
 
 
 
-#references:
+# References:
 
 https://die-antwort.eu/techblog/2017-12-setup-raspberry-pi-for-kiosk-mode/
