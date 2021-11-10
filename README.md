@@ -13,6 +13,7 @@ apt install --no-install-recommends -y xorg  chromium openbox
 ### Add new local user (pam)  with minimum privalages to launch chromium with xinit
 ```
 useradd kiosk
+passwd kiosk
 mkhomedir_helper kiosk
 ```
 
