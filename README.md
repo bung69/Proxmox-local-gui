@@ -38,7 +38,7 @@ setxkbmap -option terminate:ctrl_alt_bksp
 # Start Chromium in kiosk mode
 #sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' ~/.config/chr>
 #sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type">
-chromium https://127.0.0.1:8006 --kiosk --no-sandbox --window-size=1920,1080 --incognito --noerrdialogs --disable-translate --no-first-run --fast --fast-start --disable-infobars --disable-features=TranslateUI --disk-cache-dir=/dev/null --password-store=basic
+chromium https://127.0.0.1:8006 --kiosk --window-size=1920,1080 --incognito --noerrdialogs --disable-translate --no-first-run --fast --fast-start --disable-infobars --disable-features=TranslateUI --disk-cache-dir=/dev/null --password-store=basic
 
 ```
 
