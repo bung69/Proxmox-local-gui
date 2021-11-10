@@ -42,7 +42,18 @@ chromium https://127.0.0.1:8006 --kiosk --window-size=1920,1080 --incognito --no
 
 ```
 
+### Edit .bashrc
 
+append to the end of user "kiosk" .bashrc file
+
+```
+nano /home/kiosk/.bashrc
+```
+
+```
+# start x openbox on login  see  /etc/xdg/openbox/autostart
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx
+```
 
 
 # References:
