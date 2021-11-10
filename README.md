@@ -24,7 +24,7 @@ nano /home/kiosk/launch-kiosk-gui.sh
     xinit \
     /usr/bin/chromium \
     https://127.0.0.1:8006 \
-    #--kiosk \
+    --kiosk \
     --no-sandbox \
     --window-size=1920,1080 \
     --incognito \
@@ -37,6 +37,14 @@ nano /home/kiosk/launch-kiosk-gui.sh
     --disable-features=TranslateUI \
     --disk-cache-dir=/dev/null \
     --password-store=basic
+```
+## change owner, group and restrict permissions
+
+```
+chown kiosk /home/kiosk/launch-kiosk-gui.sh
+chgrp kiosk /home/kiosk/launch-kiosk-gui.sh
+chmod a-rwx launch-kiosk-gui.sh
+chmod u+x launch-kiosk-gui.sh
 ```
 
 ## Create service to run script at startup
