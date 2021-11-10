@@ -39,7 +39,7 @@ https://127.0.0.1:8006 \
 --disk-cache-dir=/dev/null \
 --password-store=basic
 ```
-### change owner, group and restrict permissions
+### Change owner, group and restrict permissions
 
 ```
 chown kiosk /home/kiosk/launch-kiosk-gui.sh
