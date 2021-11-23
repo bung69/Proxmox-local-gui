@@ -67,6 +67,8 @@ After ```https://${localip}:8006/```  add a message like:
 
 Or login as user: kiosk  for local GUI access
 
+Use ctrl + Alt + Backspace to exit GUI
+
 ```
 
 # References:
